@@ -9,18 +9,11 @@ export default function Header() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
+
                             <a className="nav-link" href="/blog">Blog</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="https://github.com/BuenVia" target="_blank">GitHub</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="https://www.linkedin.com/in/mattclifford123/" target="_blank">LinkedIn</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/documents/matt_clifford_CV.pdf" target="_blank">CV</a>
-                        </li>
+                            <a className="nav-link" href="https://github.com/BuenVia" target="_blank" rel="noreferrer">GitHub</a>                  
+                            <a className="nav-link" href="https://www.linkedin.com/in/mattclifford123/" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a className="nav-link" href="/documents/matt_clifford_CV.pdf" target="_blank" rel="noreferrer">CV</a>
                     </ul>
                 </div>
             </div>
