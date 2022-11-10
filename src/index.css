@@ -26,3 +26,72 @@ body {
   font-size: 36px;
   color: white;
 }
+
+.intro {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.title {
+  margin: 4rem;
+  text-align: center;
+  color: var(--txt-clr);
+}
+
+.card {
+  height: 100%;
+  background-color: var(--card-bkg-clr);
+  color: var(--txt-clr);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transition: 150ms;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card h5 {
+  font-size: 24px;
+}
+
+.card p {
+  color: var(--txt-clr);
+}
+
+.item-container {
+  padding: 1rem;
+  border-bottom: 1px solid var(--trim-clr);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-sm {
+  background-color: var(--trim-clr);
+  color: white;
+}
+
+.btn-sm:hover {
+  transition: 500ms;
+  background-color: var(--btn-hover-clr);
+  color: var(--txt-hover-clr);
+}
+
+.img-height {
+  height: 100%;
+}
+
+.prof-img {
+  border-radius: 100%;
+}
+
+.email-link {
+  font-weight: 600;
+}
