@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Intro from "./components/Intro"
 import Languages from "./components/Languages"
 import Projects from "./components/Projects"
+import BlogPosts from "./components/BlogPosts"
 
 export default function App() {
 
@@ -18,6 +19,7 @@ export default function App() {
      </div>
      <div className="row mt-4">
       <Projects />
+      <BlogPosts />
      </div>
     </div>
   </div>
