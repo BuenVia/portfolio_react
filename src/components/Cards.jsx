@@ -1,5 +1,4 @@
 import CardBody from "./CardBody"
-import intro from "../intro"
 
 export default function Cards(props) {
     return (
