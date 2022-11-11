@@ -5,7 +5,7 @@ export default function BlogPosts() {
 
     const [blogPosts, setBlogPosts] = useState([])
     
-    const url = 'https://mjclifford.herokuapp.com/api/blog'
+    const url = 'https://mjclifford-blog.herokuapp.com/api/blog'
 
     useEffect(() => {
         fetch(url)
