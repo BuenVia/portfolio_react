@@ -89,9 +89,24 @@ body {
 }
 
 .prof-img {
-  border-radius: 100%;
+  height: 300px;
+  border-radius: .25rem;
 }
 
 .email-link {
   font-weight: 600;
+}
+.card-header {
+  display: flex;
+  background-color: var(--trim-clr);
+  color: white;
+}
+
+.btn-card {
+  margin-left: auto;
+  border: none;
+  border-radius: .5rem;
+  height: 30px;
+  background-color: white;
+  color: var(--trim-clr);
 }

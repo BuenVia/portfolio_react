@@ -1,6 +1,6 @@
 export default function ProjectContainer(props) {
     return (
-        <div className="item-container">
+        <div className="item-container col-md-6">
             <h5 className="card-title">{props.project.title}</h5>
             <p className="card-text">{props.project.content}</p>
             <div className="card-btn-cont">

@@ -4,6 +4,7 @@ import Intro from "./components/Intro"
 import Languages from "./components/Languages"
 import Projects from "./components/Projects"
 import BlogPosts from "./components/BlogPosts"
+import Video from "./components/Video"
 
 export default function App() {
 
@@ -20,6 +21,7 @@ export default function App() {
      <div className="row mt-4">
       <Projects />
       <BlogPosts />
+      <Video />
      </div>
     </div>
   </div>
