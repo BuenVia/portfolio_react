@@ -89,7 +89,7 @@ body {
 }
 
 .prof-img {
-  height: 300px;
+  max-height: 300px;
   border-radius: .25rem;
 }
 
