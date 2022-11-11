@@ -10,7 +10,7 @@ export default function Header() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
 
-                            <a className="nav-link" href="/blog">Blog</a>
+                            <a className="nav-link" href="https://mjclifford-blog.herokuapp.com">Blog</a>
                             <a className="nav-link" href="https://github.com/BuenVia" target="_blank" rel="noreferrer">GitHub</a>                  
                             <a className="nav-link" href="https://www.linkedin.com/in/mattclifford123/" target="_blank" rel="noreferrer">LinkedIn</a>
                             <a className="nav-link" href="/documents/matt_clifford_CV.pdf" target="_blank" rel="noreferrer">CV</a>
