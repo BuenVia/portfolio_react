@@ -15,7 +15,7 @@ export default function Projects() {
     }
 
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 mt-4">
         <div className="card">  
             <div className="card-header">
                 <h4>Projects</h4>

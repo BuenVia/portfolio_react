@@ -20,7 +20,7 @@ export default function BlogPosts() {
     }
 
     return (
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4 mt-4">
                 <div className="card mb-3">
                     <div className="row g-0">
                         <div className="col-md">

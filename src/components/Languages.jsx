@@ -1,6 +1,6 @@
 export default function Languages() {
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 mt-4">
             <div className="card">  
                 <div className="card-header">
                     <h4>Languages & Frameworks</h4>

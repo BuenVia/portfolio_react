@@ -13,12 +13,12 @@ export default function App() {
 
   return <div>
     <Header />
-    <div className="container">
-     <div className="row mt-4">
+    <div className="container mb-4">
+     <div className="row">
       <Intro />
       <Languages />
      </div>
-     <div className="row mt-4">
+     <div className="row">
       <Projects />
       <BlogPosts />
       <Video />
