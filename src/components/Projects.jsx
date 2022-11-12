@@ -1,6 +1,6 @@
 import ProjectContainer from "./ProjectContainer"
 import projects from "../projects"
-import React, { useState } from "react"
+import React from "react"
 
 export default function Projects() {
 
