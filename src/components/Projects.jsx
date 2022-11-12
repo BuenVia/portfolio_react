@@ -4,16 +4,6 @@ import React, { useState } from "react"
 
 export default function Projects() {
 
-    const [noProjects, setNoProjects] = useState()
-
-    function handleClick() {
-        if (noProjects === -2) {
-            setNoProjects(null)
-        } else {
-            setNoProjects(-2)
-        }
-    }
-
     return (
         <div className="mt-4">
         <div className="card">  

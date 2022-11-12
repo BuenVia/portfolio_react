@@ -13,11 +13,6 @@ export default function BlogPosts() {
         .then(json => setBlogPosts(json))
     }, [])
 
-    const [noPosts, setNoPosts] = useState(-1)
-
-    function handleClick() {
-        return noPosts === -1 ? setNoPosts(null) : setNoPosts(-1)
-    }
 
     return (
             <div className="col-md-4 mt-4">
@@ -29,7 +24,7 @@ export default function BlogPosts() {
                             </div>
                             <div className="card-body">
 
-                                {blogPosts.slice(noPosts).reverse().map(post => {
+                                {blogPosts.slice(-1).reverse().map(post => {
                                     return <BlogPostContainer key={post._id} blogPost={post} />
                                 })}
                             
