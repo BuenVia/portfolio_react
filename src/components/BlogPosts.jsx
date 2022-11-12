@@ -26,7 +26,6 @@ export default function BlogPosts() {
                         <div className="col-md">
                             <div className="card-header">
                                 <h5 className="card-title">Latest Blog Post</h5>
-                                <button className="btn-card" onClick={handleClick}>More...</button>
                             </div>
                             <div className="card-body">
 

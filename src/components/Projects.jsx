@@ -7,10 +7,10 @@ export default function Projects() {
     const [noProjects, setNoProjects] = useState()
 
     function handleClick() {
-        if (noProjects === -1) {
+        if (noProjects === -2) {
             setNoProjects(null)
         } else {
-            setNoProjects(-1)
+            setNoProjects(-2)
         }
     }
 
@@ -19,10 +19,9 @@ export default function Projects() {
         <div className="card">  
             <div className="card-header">
                 <h4>Projects</h4>
-                <button onClick={handleClick} className='btn-card'>More...</button>
             </div>
             <div className="card-body row">
-                {projects.slice(noProjects).map(project => {
+                {projects.reverse().map(project => {
                     return <ProjectContainer key={project.id} project={project} />
                 })}
             </div>
