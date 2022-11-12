@@ -4,7 +4,7 @@ import React, { useState } from "react"
 
 export default function Projects() {
 
-    const [noProjects, setNoProjects] = useState(-1)
+    const [noProjects, setNoProjects] = useState()
 
     function handleClick() {
         if (noProjects === -1) {
@@ -15,7 +15,7 @@ export default function Projects() {
     }
 
     return (
-        <div className="col-md-4 mt-4">
+        <div className="mt-4">
         <div className="card">  
             <div className="card-header">
                 <h4>Projects</h4>
