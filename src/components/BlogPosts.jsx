@@ -10,7 +10,7 @@ export default function BlogPosts() {
 
     const loadBlog = async () => {
         try {
-            const data = await axios
+            await axios
             .get(url)
             .then(res => setBlogPosts(res.data[0]))
             setLoading(true)
