@@ -128,3 +128,10 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.blog-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
