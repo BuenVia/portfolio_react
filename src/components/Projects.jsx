@@ -4,6 +4,7 @@ import axios from "axios"
 
 export default function Projects() {
 
+    const [loading, setLoading] = useState(false)
     const [projectsArr, setProjectsArr] = useState([])
 
     const url = 'https://mjclifford.onrender.com/api/projects'
@@ -11,10 +12,8 @@ export default function Projects() {
     const loadProjects = async () => {
         try {
             await axios.get(url)
-            .then(res => {
-                console.log(res.data)
-                setProjectsArr(res.data)
-            })            
+            .then(res => setProjectsArr(res.data))            
+            setLoading(true)
         } catch (err) {
             console.error(err)
         }
@@ -30,10 +29,19 @@ export default function Projects() {
             <div className="card-header">
                 <h4>Projects</h4>
             </div>
-            <div className="card-body row">
+            <div className="blog-body">
+            {loading ? 
+                <div className="card-body row">
                 {projectsArr.reverse().map(project => {
                     return <ProjectContainer key={project._id} project={project} />
                 })}
+            </div>
+            : 
+            <div style={{marginTop: '1rem'}}>
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>}
             </div>
         </div>
     </div>
