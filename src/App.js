@@ -1,9 +1,12 @@
 import React from "react"
-import Header from "./components/Header"
-import Intro from "./components/Intro"
-import Projects from "./components/Projects"
-import BlogPosts from "./components/BlogPosts"
-import Footer from "./components/Footer"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import NoPage from "./pages/NoPage";
+
+
+
 
 export default function App() {
 
@@ -11,20 +14,14 @@ export default function App() {
 
 
   return (
-    <div>
-    <Header />
-      <div  className="main">
-        <div className="container mb-4">
-          <div className="row">
-            <Intro />
-            <BlogPosts />
-          </div>
-          <div className="row">
-            <Projects />
-          </div>
-        </div>
-      </div>
-    <Footer />
-  </div>
+<BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }

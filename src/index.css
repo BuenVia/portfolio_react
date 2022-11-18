@@ -108,6 +108,12 @@ body {
   color: white;
 }
 
+.title {
+  margin: 2rem;
+  text-align: center;
+  color: var(--trim-clr);
+}
+
 .email {
   font-weight: 700;
 

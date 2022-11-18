@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
     return (
     <header>
@@ -9,7 +11,7 @@ export default function Header() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                            <a className="nav-link" href="https://mjclifford-blog.herokuapp.com" target="_blank" rel="noreferrer">Blog</a>
+                            <Link to="/blog" className="nav-link">Blog</Link>
                             <a className="nav-link" href="https://github.com/BuenVia" target="_blank" rel="noreferrer">GitHub</a>                  
                             <a className="nav-link" href="https://www.linkedin.com/in/mattclifford123/" target="_blank" rel="noreferrer">LinkedIn</a>
                             <a className="nav-link" href="/matt_clifford_CV.pdf" target="_blank" rel="noreferrer">CV</a>
