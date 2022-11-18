@@ -6,13 +6,13 @@ export default function BlogPosts() {
     const [loading, setLoading] = useState(false)
     const [blogPosts, setBlogPosts] = useState([])
     
-    const url = 'https://mjclifford-blog.herokuapp.com/api/blog'
+    const url = 'https://mjclifford.onrender.com/api/blog/latest'
 
     const loadBlog = async () => {
         try {
             await axios
             .get(url)
-            .then(res => setBlogPosts(res.data[0]))
+            .then(res => setBlogPosts(res.data))
             setLoading(true)
         } catch (error) {
             console.log(error);
