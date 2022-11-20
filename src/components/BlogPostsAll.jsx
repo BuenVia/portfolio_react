@@ -1,8 +1,6 @@
 export default function BlogPostsAll(props) {
-    
-    function handleClick() {
-        return props.click(props.blog)
-    }
+
+    const url = `https://mjclifford-blog.herokuapp.com/blog/${props.blog.slug}`
     
     return (
         <div className="col-md-6 mt-3">
@@ -16,7 +14,7 @@ export default function BlogPostsAll(props) {
                                     <p>{props.blog.markdown.slice(0,200)}</p>
                                 </div>
                                 <div className="card-footer">
-                                    <button className="btn btn-sm" onClick={handleClick}>Read More</button>
+                                    <a href={url} className="btn btn-sm">Read More...</a>
                                 </div>
                             </div>
                         </div>
