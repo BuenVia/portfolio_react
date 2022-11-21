@@ -1,6 +1,6 @@
 export default function BlogPostsAll(props) {
 
-    const url = `https://mjclifford-blog.herokuapp.com/blog/${props.blog.slug}`
+    const url = `https://mjclifford.onrender.com/blog/${props.blog.slug}`
     
     return (
         <div className="col-md-6 mt-3">
