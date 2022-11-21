@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import BlogPostsAll from "../components/BlogPostsAll";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 
 export default function Blog() {
 
+    const [loading, setLoading] = useState(false)
     const [blogArr, setBlogArr] = useState([])
 
 
@@ -17,6 +19,7 @@ export default function Blog() {
             .then(res => {
                 setBlogArr(res.data)
             })
+            setLoading(true)
         } catch (err) {
             console.error(err)
         }
@@ -31,10 +34,10 @@ export default function Blog() {
         <div className="container">
             <h1 className="title">Blog</h1>
             <div className="row">
-            {blogArr.map(blog => {
+            {loading ? blogArr.reverse().map(blog => {
                     return (
                         <BlogPostsAll key={blog._id} blog={blog} />
-                )})}
+                )}) : <LoadingSpinner />}
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
+import LoadingSpinner from "./LoadingSpinner"
 
 export default function BlogPosts() {
 
@@ -41,12 +42,7 @@ export default function BlogPosts() {
                                     <a href="/blog" className="btn btn-sm btn-st">Read more</a>
                                 </div> 
                                 : 
-                                <div style={{marginTop: '5rem'}}>
-                                    <div className="spinner-border" role="status">
-                                        <span className="visually-hidden">Loading...</span>
-                                    </div>
-                                </div>
-                                
+                                <LoadingSpinner />
                                 }
                             </div>
                         </div>
