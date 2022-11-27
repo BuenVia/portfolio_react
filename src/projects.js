@@ -54,7 +54,7 @@ const projects = [
     {
         title: 'BuenVia API 📟',
         content: 'API built in Node JS that returns Spanish/English vocabulary.',
-        site: 'https://buenvia.herokuapp.com/',
+        site: 'https://buenvia-api.onrender.com',
         gitHub: 'https://github.com/BuenVia/spanish-API',
         __v: 0,
     }
