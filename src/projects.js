@@ -15,14 +15,6 @@ const projects = [
       __v: 0
     },
     {
-      title: "ARC Support Services 🚗",
-      content:
-        "Website for ARC Support Services built using HTML, CSS, JS.",
-      site: "https://arcsupportservices.netlify.com/",
-      gitHub: "https://github.com/BuenVia/arc_new",
-      __v: 0
-    },
-    {
         title: "Note App 🗈",
         content: "A note taking app built using React. ",
         site: "https://keep-app-react.netlify.app/",
@@ -50,12 +42,20 @@ const projects = [
         site: "https://verbapp.netlify.app/",
         gitHub: "https://github.com/BuenVia/VerbApp",
         __v: 0,
-      },    
+      },
+      {
+        title: "ARC Support Services 🚗",
+        content:
+          "Website for ARC Support Services built using HTML, CSS, JS.",
+        site: "https://arcsupportservices.netlify.com/",
+        gitHub: "https://github.com/BuenVia/arc_new",
+        __v: 0
+      }, 
     {
         title: 'BuenVia API 📟',
         content: 'API built in Node JS that returns Spanish/English vocabulary.',
-        site: 'https://buenvia-api.onrender.com',
-        gitHub: 'https://github.com/BuenVia/spanish-API',
+        site: 'https://buenvia-api.netlify.app/',
+        gitHub: 'https://github.com/BuenVia/spanish-api-react',
         __v: 0,
     }
   ]
