@@ -33,6 +33,26 @@ body {
   }
 }
 
+.lang-btn {
+  padding: .5rem;
+  width: fit-content;
+  margin-top: .5rem;
+  background-color: var(--trim-clr);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lang-img {
+  height: 20px;
+}
+
 .intro {
   padding: 2rem;
   display: flex;

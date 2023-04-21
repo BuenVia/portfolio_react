@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import LoadingSpinner from "./LoadingSpinner"
 
-export default function BlogPosts() {
+export default function BlogPosts(props) {
 
     const [loading, setLoading] = useState(false)
     const [blogPosts, setBlogPosts] = useState([])
@@ -30,7 +30,7 @@ export default function BlogPosts() {
                     <div className="row g-0">
                         <div className="col-md">
                             <div className="card-header">
-                                <h5 className="card-title">Latest Blog Post</h5>
+                                <h5 className="card-title">{props.language ? 'La última entrada' : 'Latest Blog Post'}</h5>
                             </div>
                             <div className="card-body blog-body">
                                 {loading ? 

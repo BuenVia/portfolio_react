@@ -1,20 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Intro from '../components/Intro'
 import BlogPosts from '../components/BlogPosts'
 import Projects from '../components/Projects'
 
 
 export default function Home() {
+
+  const [lang, setLang] = useState(false)
+
+  function handleClick() {
+      setLang(prevVals => !prevVals)
+  }
+
     return (
         <div>
 
             <div className="container mb-4">
               <div className="row">
-                <Intro />
-                <BlogPosts />
+              <span className="" onClick={handleClick}>{lang ? <div className="lang-btn"><img className="lang-img" src='./spain.png'></img><span>ES</span></div> : <div className="lang-btn"><img className="lang-img" src='./UK.png'></img><span>EN</span></div>}</span>
+                <Intro language={lang} />
+                <BlogPosts language={lang} />
               </div>
               <div className="row">
-                <Projects />
+                <Projects language={lang} />
               </div>
             </div>
 
