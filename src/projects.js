@@ -1,4 +1,5 @@
-  const projects = [
+  const projects = {
+    english: [
     {
       title: "Finance Tracker 💰",
       content:
@@ -58,6 +59,68 @@
         gitHub: 'https://github.com/BuenVia/spanish-api-react',
         __v: 0,
     }
+  ],
+  spanish: [
+    {
+      title: "Monitor de fianzas 💰",
+      content:
+        "Track monetary incomings and outgoings. Built usings HTML, CSS and JS.",
+      site: "https://tangerine-zuccutto-1594b0.netlify.app/",
+      gitHub: "https://github.com/BuenVia/finance_tracker",
+      __v: 0,
+    },
+    {
+      title: "Tienda de equipaje de deportes ⚽",
+      content: "An eCommerce store. Built with HTML, CSS and JS.",
+      site: "https://startling-crisp-5a80df.netlify.app/",
+      gitHub: "https://github.com/BuenVia/eCommerce",
+      __v: 0
+    },
+    {
+        title: "Escriba Notas 🗈",
+        content: "A note taking app built using React. ",
+        site: "https://keep-app-react.netlify.app/",
+        gitHub: "https://github.com/BuenVia/Keeper_App",
+        __v: 0
+      },
+    {
+      title: "Pronóstico del Tiempo 🌦",
+      content: "A weather app, perfoming an API call based on locations, built using React. ",
+      site: "https://previsto.netlify.app/",
+      gitHub: "https://github.com/BuenVia/weatherReact",
+      __v: 0
+    },
+    {
+      title: "Tarjetas de País 🌍",
+      content: "An app that performs an API call that returns country infomation cards, built using React. ",
+      site: "https://countrycard.netlify.app/",
+      gitHub: "https://github.com/BuenVia/countries-finder",
+      __v: 0
+    },
+    {
+        title: "VerbApps 🗣️ ",
+        content:
+        "Una programa para practicar las conjugaciones en español. Programado en HTML, CSS y JS",
+        site: "https://verbapp.netlify.app/",
+        gitHub: "https://github.com/BuenVia/VerbApp",
+        __v: 0,
+      },
+      {
+        title: "ARC Support Services 🚗",
+        content:
+          "Pagína web de ARC Support Services programado con HTML, CSS, JS.",
+        site: "https://arcsupportservices.netlify.com/",
+        gitHub: "https://github.com/BuenVia/arc_new",
+        __v: 0
+      }, 
+    {
+        title: 'BuenVia API 📟',
+        content: 'API programado con Node JS que responda con vocabulario en español y ingles.',
+        site: 'https://buenvia-api.netlify.app/',
+        gitHub: 'https://github.com/BuenVia/spanish-api-react',
+        __v: 0,
+    }
   ]
+  }
 
   export default projects
