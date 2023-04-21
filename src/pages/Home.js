@@ -17,7 +17,7 @@ export default function Home() {
 
             <div className="container mb-4">
               <div className="row">
-              <span className="" onClick={handleClick}>{lang ? <div className="lang-btn"><img className="lang-img" src='./spain.png'></img><span>ES</span></div> : <div className="lang-btn"><img className="lang-img" src='./UK.png'></img><span>EN</span></div>}</span>
+              <span className="" onClick={handleClick}>{lang ? <div className="lang-btn"><img className="lang-img" src='./spain.png' alt="Spain"></img><span>ES</span></div> : <div className="lang-btn"><img className="lang-img" src='./UK.png' alt="UK"></img><span>EN</span></div>}</span>
                 <Intro language={lang} />
                 <BlogPosts language={lang} />
               </div>

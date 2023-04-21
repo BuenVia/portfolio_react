@@ -1,4 +1,3 @@
-import { useState } from "react"
 import language from "../languages"
 
 export default function Intro(props) {
