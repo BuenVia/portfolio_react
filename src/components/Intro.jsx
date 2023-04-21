@@ -20,7 +20,7 @@ export default function Intro() {
                         <img src={'profile.jpg'} alt="profile" className="prof-img"></img>
                     </div>
                     <div className="col-md-6 p-2">
-                    <span className="btn btn-sm btn-st" onClick={handleClick}>{lang ? 'Haz click aquí para español' : 'Click here for English'}</span>
+                    <span className="btn btn-sm btn-st" onClick={handleClick}>{lang ? 'Click here for English' : 'Haz click aquí para español'}</span>
                         {lang ? language.espIntro.map(i => {
                             return (<p>{i}</p>)
                         }) : 
