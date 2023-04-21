@@ -3,10 +3,10 @@ import language from "../languages"
 
 export default function Intro() {
 
-    const [isEsp, setIsEsp] = useState(false)
+    const [lang, setLang] = useState(false)
 
     function handleClick() {
-        setIsEsp(prevVals => !prevVals)
+        setLang(prevVals => !prevVals)
     }
 
     return (
@@ -20,11 +20,11 @@ export default function Intro() {
                         <img src={'profile.jpg'} alt="profile" className="prof-img"></img>
                     </div>
                     <div className="col-md-6 p-2">
-                    <span className="btn btn-sm btn-st" onClick={handleClick}>{isEsp ? 'Haz click aquí para español' : 'Click here for English'}</span>
-                        {isEsp ? language.engIntro.map(i => {
+                    <span className="btn btn-sm btn-st" onClick={handleClick}>{lang ? 'Haz click aquí para español' : 'Click here for English'}</span>
+                        {lang ? language.espIntro.map(i => {
                             return (<p>{i}</p>)
                         }) : 
-                        language.espIntro.map(i => {
+                        language.engIntro.map(i => {
                             return (<p>{i}</p>)
                         })}
                         <p>📧 Email: <a href="mailto:matthewclifford@hotmail.co.uk" className="email">matthewclifford@hotmail.co.uk</a></p>
