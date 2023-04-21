@@ -8,7 +8,7 @@ export default function Intro(props) {
         <div className="col-md-8 mt-4">
             <div className="card">
                 <div className="card-header">
-                    <h4>{props.language ? 'Sobre' : 'About'}</h4>
+                    <h4>{props.language ? 'Acerca de mí' : 'About'}</h4>
                 </div>
                 <div className="card-body row">
                     <div className="col-md-6 p-2">
