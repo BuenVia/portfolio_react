@@ -1,4 +1,4 @@
-const projects = [
+  const projects = [
     {
       title: "Finance Tracker 💰",
       content:

@@ -1,4 +1,14 @@
+import { useState } from "react"
+import language from "../languages"
+
 export default function Intro() {
+
+    const [isEsp, setIsEsp] = useState(false)
+
+    function handleClick() {
+        setIsEsp(prevVals => !prevVals)
+    }
+
     return (
         <div className="col-md-8 mt-4">
             <div className="card">
@@ -10,9 +20,13 @@ export default function Intro() {
                         <img src={'profile.jpg'} alt="profile" className="prof-img"></img>
                     </div>
                     <div className="col-md-6 p-2">
-                        <p>Hi, I am Matt 👋. A self-taught WebDev with a passion for code 💻.</p> 
-                        <p>I have been self-teaching myself JavaScript, HTML, CSS, NodeJS, React and Python with a strong desire to move into a career in coding 👨‍💻.</p>
-                        <p>If you want me to build your website or webapp, or you want to collaborate, then get in touch! 🗣️</p>
+                    <span className="btn btn-sm btn-st" onClick={handleClick}>{isEsp ? 'Haz click aquí para español' : 'Click here for English'}</span>
+                        {isEsp ? language.engIntro.map(i => {
+                            return (<p>{i}</p>)
+                        }) : 
+                        language.espIntro.map(i => {
+                            return (<p>{i}</p>)
+                        })}
                         <p>📧 Email: <a href="mailto:matthewclifford@hotmail.co.uk" className="email">matthewclifford@hotmail.co.uk</a></p>
                     </div>
                 </div>

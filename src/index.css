@@ -82,7 +82,7 @@ body {
 .btn-sm {
   background-color: var(--trim-clr);
   color: white;
-  margin: .25rem;
+  margin: .25rem .25rem .25rem 0;
 }
 
 .btn-sm:hover {
