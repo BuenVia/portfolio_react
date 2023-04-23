@@ -12,14 +12,7 @@ export default function Projects(props) {
             <div className="blog-body">
  
                 <div className="card-body row">
-                {props.language ? 
-                projects.spanish.reverse().map(project => {
-                    return <ProjectContainer key={project._id} project={project} />
-                }) 
-                : 
-                projects.english.reverse().map(project => {
-                    return <ProjectContainer key={project._id} project={project} />
-                })}
+                {projects.map(project => {return <ProjectContainer key={project._id} project={project} language={props.language} />})}
             </div>
 
             </div>

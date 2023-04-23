@@ -39,7 +39,7 @@ export default function BlogPosts(props) {
                                     <p>{new Date(blogPosts.createdAt).toLocaleDateString()}</p>
                                     <p>By {blogPosts.auth}</p>
                                     <p className="card-text">{blogPosts.markdown.slice(0,200)}...</p>
-                                    <a href="/blog" className="btn btn-sm btn-st">Read more</a>
+                                    <a href="/blog" className="btn btn-sm btn-st">{props.language ? "Leer Más" : "Read More"}</a>
                                 </div> 
                                 : 
                                 <LoadingSpinner />
