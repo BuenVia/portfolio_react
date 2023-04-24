@@ -11,8 +11,8 @@ const spanish = [
     },
     {
         id: 3,
-        question: "I hope to go",
-        answers: ["Ojalá vaya", "Ojalá que vaya"]
+        question: "I hope that you go",
+        answers: ["Ojalá te vayas", "Ojalá que te vayas"]
     },
     {
         id: 4,
