@@ -36,7 +36,7 @@ export default function SpanishHome() {
         <div className="row">
             {/* <SpanishQuestion checkAnswer={checkAnswer} spanish={spanish} questionIndex={questionIndex} /> */}
 
-            <div>
+
             <div className="col-md-8 mb-3">
                 <div className="card">
                     <div className="card-header">
@@ -67,6 +67,6 @@ export default function SpanishHome() {
                 </div>
             </div>
         </div>
-        </div>
+
     )
 }

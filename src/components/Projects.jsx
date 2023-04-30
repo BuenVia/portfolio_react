@@ -12,7 +12,7 @@ export default function Projects(props) {
             <div className="blog-body">
  
                 <div className="card-body row">
-                {projects.map(project => {return <ProjectContainer key={project._id} project={project} language={props.language} />})}
+                {projects.map(project => {return <ProjectContainer key={project.id} project={project} language={props.language} />})}
             </div>
 
             </div>

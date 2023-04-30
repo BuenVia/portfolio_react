@@ -1,5 +1,6 @@
 const projects = [
   {
+    id:7,
     titleEng: 'BuenVia API 📟',
     titleEsp: 'BuenVia API 📟',
     contentEng: 'API built in Node JS that returns Spanish/English vocabulary.',
@@ -9,6 +10,7 @@ const projects = [
     __v: 0,
   },
   {
+    id:6,
     titleEng: "ARC Support Services 🚗",
     titleEsp: "ARC Support Services 🚗",
     contentEng: "Website for ARC Support Services built using HTML, CSS, JS.",
@@ -18,6 +20,7 @@ const projects = [
     __v: 0
   }, 
   {
+    id:5,
     titleEng: "VerbApps 🗣️ ",
     titleEsp: "VerbApps 🗣️ ",
     contentEng: "A language learning app for practicing Spanish verb conjugations. Built with HTML, CSS and JS.",
@@ -27,6 +30,7 @@ const projects = [
     __v: 0,
   },
   {
+    id:4,
     titleEng: "Country Cards 🌍",
     titleEsp: "Tarjetas de País 🌍",
     contentEng: "An app that performs an API call that returns country infomation cards, built using React. ",
@@ -36,6 +40,7 @@ const projects = [
     __v: 0
   },
   {
+    id:3,
     titleEng: "Weather App 🌦",
     titleEsp: "Pronóstico de Tiempo 🌦",
     contentEng: "A weather app, perfoming an API call based on locations, built using React.",
@@ -45,6 +50,7 @@ const projects = [
     __v: 0
   },
   {
+    id:2,
     titleEng: "Note App 🗈",
     titleEsp: "Escriba Notas 🗈",
     contentEng: "A note taking app built using React.",
@@ -54,6 +60,7 @@ const projects = [
     __v: 0
   },
   {
+    id:1,
     titleEng: "Sports Stash ⚽",
     titleEsp: "Tiende de Equipaje de Deportes ⚽",
     contentEng: "An eCommerce store. Built with HTML, CSS and JS.",
@@ -63,6 +70,7 @@ const projects = [
     __v: 0
   },
   {
+    id:0,
     titleEng: "Finance Tracker 💰",
     titleEsp: "Monitor de Fianzas 💰",
     contentEng:

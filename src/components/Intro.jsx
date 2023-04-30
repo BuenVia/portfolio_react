@@ -1,4 +1,5 @@
 import language from "../languages"
+import React from "react"
 
 export default function Intro(props) {
 
@@ -16,10 +17,10 @@ export default function Intro(props) {
                     </div>
                     <div className="col-md-6 p-2">
                         {props.language ? language.espIntro.map(i => {
-                            return (<p>{i}</p>)
+                            return (<p key={language.espIntro.indexOf(i)}>{i}</p>)
                         }) : 
                         language.engIntro.map(i => {
-                            return (<p>{i}</p>)
+                            return (<p key={language.engIntro.indexOf(i)}>{i}</p>)
                         })}
                         <p>📧 Email: <a href="mailto:matthewclifford@hotmail.co.uk" className="email">matthewclifford@hotmail.co.uk</a></p>
                     </div>
