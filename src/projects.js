@@ -62,7 +62,7 @@ const projects = [
   {
     id:1,
     titleEng: "Sports Stash ⚽",
-    titleEsp: "Tiende de Equipaje de Deportes ⚽",
+    titleEsp: "Tienda de Equipaje de Deportes ⚽",
     contentEng: "An eCommerce store. Built with HTML, CSS and JS.",
     contentEsp: "Una tienda de eCommerce. Programada con HTML, CSS y JS",
     site: "https://startling-crisp-5a80df.netlify.app/",
