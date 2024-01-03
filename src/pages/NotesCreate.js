@@ -1,15 +1,18 @@
+import axios from "axios";
 import { useState } from "react";
 
 
-const Notes = () => {
+const NotesCreate = () => {
 
     const [newNote, setNewNote] = useState({
         title: "",
         author: "",
-        content: "",
+        markDown: "",
         tags: [],
         createdAt: "2024-01-01"
     })
+
+    const url = 'http://localhost:9000/api/note'
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -21,9 +24,13 @@ const Notes = () => {
         })
     }
 
-    const handleClick = (e) => {
+    const handleClick = async (e) => {
         e.preventDefault()
-        console.log(newNote);
+        try {
+            await axios.post(url, {'newNote': 'blah'}).then(response => console.log(response.data))
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     return (
@@ -60,4 +67,4 @@ const Notes = () => {
     )
 }
 
-export default Notes;
+export default NotesCreate;
