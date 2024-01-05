@@ -7,13 +7,12 @@ const NotesCreate = () => {
     const [newNote, setNewNote] = useState({
         title: "",
         author: "",
-        markDown: "",
+        markdown: "",
         tags: [],
         createdAt: "2024-01-01"
     })
 
-    const url = 'http://localhost:9000/api/note'
-
+    
     const handleChange = (e) => {
         const { name, value } = e.target
         setNewNote(prevVals => {
@@ -23,11 +22,11 @@ const NotesCreate = () => {
             }    
         })
     }
-
-    const handleClick = async (e) => {
-        e.preventDefault()
+    
+    const handleClick = () => {
+        const url = 'https://mjclifford.onrender.com/api/note'
         try {
-            await axios.post(url, {'newNote': 'blah'}).then(response => console.log(response.data))
+            axios.post(url, newNote).then(response => console.log(response.data))
         } catch (error) {
             console.error(error)
         }
@@ -51,7 +50,7 @@ const NotesCreate = () => {
                                 </div>
                                 <div className="">
                                     <label className="form-label">Content</label>
-                                    <textarea className="form-control" name="content" onChange={handleChange}></textarea>
+                                    <textarea className="form-control" name="markdown" onChange={handleChange}></textarea>
                                 </div>
                                 <div className="">
                                     <label className="form-label">Tags</label>
@@ -59,6 +58,9 @@ const NotesCreate = () => {
                                 </div>
                                 <button type="submit" className="btn btn-primary mt-2">Submit</button>
                             </form>
+                        </div>
+                        <div className="card-footer">
+                            <a href="/notes"><button className="btn btn-sm">Back</button></a>
                         </div>
                     </div>
                 </div>
