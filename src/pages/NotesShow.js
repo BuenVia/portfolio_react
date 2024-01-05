@@ -8,12 +8,9 @@ const NotesShow = () => {
     
     const [loading, setLoading] = useState(false);
     const [note, setNote] = useState({});
-
     const { id } = useParams()
-    console.log(id);
-    const url = `https://mjclifford.onrender.com/api/note/${id}`
 
-    useEffect(() => {
+    useEffect((url = `https://mjclifford.onrender.com/api/note/${id}`) => {
             try {
                 axios
                 .get(url)
@@ -24,7 +21,7 @@ const NotesShow = () => {
             } catch (error) {
                 
             }
-    }, [])
+    }, [id])
 
     return(
         <div className="container">
