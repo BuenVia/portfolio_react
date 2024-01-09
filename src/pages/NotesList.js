@@ -27,6 +27,9 @@ const NotesList = () => {
 
     return (
         <div className='container mt-5'>
+            <a href='/notes/create'>
+                <button className='btn btn-sm'>New</button>
+            </a>
             <div className='row'>
 
             {loading ? notesList.reverse().map(note => {

@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Markdown from "react-markdown";
 import LoadingSpinner from "../components/LoadingSpinner";
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const NotesShow = () => {
     
@@ -31,7 +32,7 @@ const NotesShow = () => {
                 </div>
                 <div className="card-body">
                     <h6>By: {note.author}</h6>
-                    <Markdown>{note.markdown}</Markdown>
+                    <Markdown remarkPlugins={[remarkGfm]}>{note.markdown}</Markdown>
                 </div>
                 <div className="card-footer">
                     <a href="/notes"><button className="btn btn-sm">Back</button></a>
