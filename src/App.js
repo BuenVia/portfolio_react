@@ -7,6 +7,7 @@ import NoPage from "./pages/NoPage";
 import NotesCreate from "./pages/NotesCreate";
 import NotesList from "./pages/NotesList";
 import NotesShow from "./pages/NotesShow";
+import FlashCard from "./pages/FlashCard";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/notes/create" element={<NotesCreate />} />
           <Route path="/notes" element={<NotesList />} />
           <Route path="/notes/:id" element={<NotesShow />} />
+          <Route path="/flash" element={<FlashCard />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

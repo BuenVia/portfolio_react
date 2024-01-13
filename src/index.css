@@ -2,7 +2,8 @@
   --bkg-clr: rgb(238, 238, 238);
   --card-bkg-clr: rgb(255, 255, 255);
   --txt-clr: rgb(44, 44, 44);
-  --trim-clr: rgb(119, 82, 183);
+  /* --trim-clr: rgb(119, 82, 183); */
+  --trim-clr: rgb(50, 50, 50);
   /* --trim-clr: rgb(72, 188, 142); */
   --btn-hover-clr: rgb(116, 91, 205);
   --txt-hover-clr: rgb(200, 200, 180);
@@ -171,4 +172,36 @@ footer {
 .spinner-border {
   font-size: 24px;
   color: var(--trim-clr);
+}
+
+.flash__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.flash__sentence {
+  font-weight: 600;
+}
+
+.flash__btn {
+  margin: 0 .25em;
+  border: none;
+  background-color: transparent;
+  font-size: 26px;
+}
+
+.flash__btn:hover {
+  color: var(--alt-shadow-clr);
+}
+
+.flash__input {
+  margin: 2em;
+  padding: .5em;
+  width: 400px;
+  border: none;
+  border-bottom: 1px solid var(--trim-clr);
+  outline: none;
 }
