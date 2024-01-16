@@ -5,10 +5,15 @@ import remarkGfm from 'remark-gfm'
 
 const FlashCard = () => {
     
+    const randomIndex = () => {
+        return Math.floor((Math.random() * sentencesArray[index].sentences.length))
+    }
     const [isActive, setIsActive] = useState(false)
     const [index, setIndex] = useState(0);
-    const [sentenceIndex, setSentenceIndex] = useState(0)
+    const [sentenceIndex, setSentenceIndex] = useState(randomIndex())
     const [answer, setAnswer] = useState("")
+    const [questionIndex, setQuestionIndex] = useState(0)
+
 
     const handleChoice = (e) => {
         const { value } = e.target
@@ -18,9 +23,13 @@ const FlashCard = () => {
 
     const handleClick = (e) => {
         // if (index < sentencesArray.length - 1 && answer === sentencesArray[index].answer) {
-        if (index < sentencesArray[index].sentences.length - 1) {
-            setSentenceIndex(val => val + 1)
-        } else if (index === sentencesArray[index].sentences.length - 1) {
+        // if (index < sentencesArray[index].sentences.length - 1) {
+        if (questionIndex < 10) {
+            // setSentenceIndex(val => val + 1)
+            setSentenceIndex(randomIndex())
+            setQuestionIndex(val => val + 1)
+        // } else if (index === sentencesArray[index].sentences.length - 1) {
+        } else if (questionIndex === 10) {
             console.log(('Complete'));
             setIsActive(false)
         } else {
@@ -44,13 +53,20 @@ const FlashCard = () => {
         speechSynthesis.speak(speech)
     }
 
+    const cancel = () => {
+        setAnswer("")
+        setIndex(0)
+        setSentenceIndex(0)
+        setIsActive(false)
+    }
+
     return (
         <div className="container">
             {isActive ? 
                 <div>
                     <div className="card mt-3">
                         <div className="card-header">
-                            Traduce
+                            Traduce {console.log(randomIndex())}
                         </div>
                         <div className="card-body flash__card">
                             <div>
@@ -59,9 +75,10 @@ const FlashCard = () => {
                             <div>
                                 <input type="text" className="flash__input" name="answer" onChange={handleInput} value={answer} />
                             </div>
+                            <button className="btn btn-sm" onClick={handleClick}>Submit</button>
                         </div>
                         <div className="card-footer">
-                            <button className="btn btn-sm" onClick={handleClick}>Submit</button>
+                            <button className="btn btn-sm" onClick={cancel}>Cancel</button>
                         </div>
 
                     </div>
