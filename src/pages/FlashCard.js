@@ -1,5 +1,7 @@
 import { useState } from "react";
 import sentencesArray from "../sentenceData";
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const FlashCard = () => {
     
@@ -16,13 +18,13 @@ const FlashCard = () => {
 
     const handleClick = (e) => {
         // if (index < sentencesArray.length - 1 && answer === sentencesArray[index].answer) {
-        if (index < sentencesArray[index].sentence.length - 1) {
+        if (index < sentencesArray[index].sentences.length - 1) {
             setSentenceIndex(val => val + 1)
-        } else if (index === sentencesArray[index].sentence.length - 1) {
+        } else if (index === sentencesArray[index].sentences.length - 1) {
             console.log(('Complete'));
             setIsActive(false)
         } else {
-            console.log(`Try again... ${sentencesArray[index].sentence[sentenceIndex].question}`)
+            console.log(`Try again... ${sentencesArray[index].sentences[sentenceIndex].question}`)
         }
         setAnswer("")
     }
@@ -37,7 +39,7 @@ const FlashCard = () => {
         const speech = new SpeechSynthesisUtterance()
         if (speechSynthesis.speaking) return
         speech.lang = "es-ES"
-        speech.text = sentencesArray[index].sentence[sentenceIndex].question
+        speech.text = sentencesArray[index].sentences[sentenceIndex].question
         speech.rate = 1
         speechSynthesis.speak(speech)
     }
@@ -45,33 +47,37 @@ const FlashCard = () => {
     return (
         <div className="container">
             {isActive ? 
-            <div className="card mt-3">
-                <div className="card-header">
-                    Traduce
-                </div>
-                <div className="card-body flash__card">
-                    <div>
-                        <span className="flash__sentence">{sentencesArray[index].sentence[sentenceIndex].answer} <button className="flash__btn" onClick={playSound}>&#9658;</button> </span>
-                    </div>
-                    <div>
-                        <input type="text" className="flash__input" name="answer" onChange={handleInput} value={answer} />
-                    </div>
-                </div>
-                <div className="card-footer">
-                    <button className="btn btn-sm" onClick={handleClick}>Submit</button>
-                </div>
+                <div>
+                    <div className="card mt-3">
+                        <div className="card-header">
+                            Traduce
+                        </div>
+                        <div className="card-body flash__card">
+                            <div>
+                                <span className="flash__sentence">{sentencesArray[index].sentences[sentenceIndex].answer} <button className="flash__btn" onClick={playSound}>&#9658;</button> </span>
+                            </div>
+                            <div>
+                                <input type="text" className="flash__input" name="answer" onChange={handleInput} value={answer} />
+                            </div>
+                        </div>
+                        <div className="card-footer">
+                            <button className="btn btn-sm" onClick={handleClick}>Submit</button>
+                        </div>
 
-        </div>
-        :
-        sentencesArray.map(sentece => {
-            return <button className="btn btn-sm" value={sentece.id} onClick={handleChoice}>{sentece.name}</button>
-        })
-        }
-            <div className="card mt-3">
-                <div className="card-header"></div>
-                <div className="card-body"></div>
-                <div className="card-footer"></div>
-            </div>
+                    </div>
+                        <div className="card mt-3">
+                            <div className="card-header"></div>
+                            <div className="card-body">
+                                <Markdown remarkPlugins={[remarkGfm]}>{sentencesArray[index].notes}</Markdown>
+                            </div>
+                            <div className="card-footer"></div>
+                        </div>
+                </div>
+                :
+                sentencesArray.map(sentece => {
+                    return <button className="btn btn-sm" key={sentece.id} value={sentece.id} onClick={handleChoice}>{sentece.name}</button>
+                })
+            }
         </div>
     )
 }
