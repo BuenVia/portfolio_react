@@ -205,3 +205,37 @@ footer {
   border-bottom: 1px solid var(--trim-clr);
   outline: none;
 }
+
+.wedding__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.wedding__name {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+}
+
+.wedding__div {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+.wedding__div select {
+  padding: .25em;
+  border: none;
+  border-radius: 6px;
+}
+.wedding__div input {
+  padding: .25em;
+  border: none;
+  border-radius: 6px;
+}
+.wedding__div textarea {
+  height: 100px;
+  padding: .25em;
+  border: none;
+  border-radius: 6px;
+  resize: none;
+}
