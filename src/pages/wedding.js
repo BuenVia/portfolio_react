@@ -1,4 +1,5 @@
 import { useState } from "react"
+import emailjs from '@emailjs/browser'
 
 const Wedding = () => {
 
@@ -23,9 +24,13 @@ const Wedding = () => {
 
     const handleSend = (e) => {
         e.preventDefault()
-        if (email.attend === "" | email.firstname === "" | email.lastname === "" | email.guests === "" | email.dietry === "" | email.address === "") {
+        // if (email.attend === "" | email.firstname === "" | email.lastname === "" | email.guests === "" | email.dietry === "" | email.address === "") {
 
-        }    }
+        // }    
+        emailjs.send('service_if35bh3', 'template_si55oe6', email, { publicKey: 'hvIxhJA1XhTZHHkL5' }).then(
+            alert("Thanks for sending... you can now navigate away.")
+        )
+    }
 
     return (
         <div className="container mb-4">
@@ -60,7 +65,7 @@ const Wedding = () => {
                     <textarea onChange={updateForm} name="dietry" id="" value={email.dietry}></textarea>
                 </div>
                 <div className="wedding__div">
-                    <label htmlFor="">Address</label>
+                    <label htmlFor="">Address (to send the invite)</label>
                     <textarea onChange={updateForm} name="address" id="" value={email.address} required></textarea>
                 </div>
                 <button type="submit" className="btn btn-sm">Submit</button>
