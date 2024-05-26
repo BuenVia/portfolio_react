@@ -15,7 +15,7 @@ const projects = [
     titleEsp: "ARC Support Services 🚗",
     contentEng: "Website for ARC Support Services built using HTML, CSS, JS.",
     contentEsp: "Pagína web de ARC Support Services programado con HTML, CSS, JS.",
-    site: "https://arcsupportservices.netlify.com/",
+    site: "https://arcsupportservices.netlify.app",
     gitHub: "https://github.com/BuenVia/arc_new",
     __v: 0
   }, 
