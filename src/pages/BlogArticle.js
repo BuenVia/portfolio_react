@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 
 export default function Blog(props) {
@@ -33,10 +35,18 @@ export default function Blog(props) {
 
     return (
         <div className="container">
-            <h1 className="title">Blog</h1>
             <div className="row">
-                <h2>{blog.title}</h2>
-                <p>{blog.markdown}</p>
+                <div className="card mt-4">
+                    <div className="card-header">
+                        <h2>{blog.title}</h2>
+                    </div>
+                    <div className="card-body">
+                        <p>by {blog.auth}</p>
+                        <p>{blog.createdAt}</p>
+                        <ReactMarkdown children={blog.markdown} remarkPlugins={[remarkGfm]} />
+                    </div>
+
+                </div>
             </div>
         </div>
     );
