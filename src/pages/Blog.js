@@ -11,6 +11,7 @@ export default function Blog() {
 
 
     const url = 'https://mjclifford.onrender.com/api/blog'
+    // const url = `http://localhost:9000/api/blog`
 
     const getBlogs = async () => {
         try {

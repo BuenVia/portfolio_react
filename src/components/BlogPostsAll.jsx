@@ -1,6 +1,7 @@
 export default function BlogPostsAll(props) {
 
     const url = `https://mjclifford.onrender.com/blog/${props.blog.slug}`
+    const url_two = `blog/${props.blog.slug}`
     
     return (
         <div className="col-md-6 mt-3">
@@ -15,6 +16,7 @@ export default function BlogPostsAll(props) {
                                 </div>
                                 <div className="card-footer">
                                     <a href={url} className="btn btn-sm">Read More...</a>
+                                    <a href={url_two} className="btn btn-sm">Read More...</a>
                                 </div>
                             </div>
                         </div>

@@ -130,11 +130,11 @@ body {
   border-bottom: 1px solid var(--txt-clr)
 }
 
-.title {
+/* .title {
   margin: 2rem;
   text-align: center;
   color: var(--trim-clr);
-}
+} */
 
 .email {
   font-weight: 700;

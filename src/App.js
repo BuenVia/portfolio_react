@@ -3,12 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
+import BlogArticle from "./pages/BlogArticle"
 import NoPage from "./pages/NoPage";
-import NotesCreate from "./pages/NotesCreate";
-import NotesList from "./pages/NotesList";
-import NotesShow from "./pages/NotesShow";
-import FlashCard from "./pages/FlashCard";
-import Wedding from "./pages/wedding";
 
 export default function App() {
   return (
@@ -17,11 +13,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blog" element={<Blog />} />
-          <Route path="/notes/create" element={<NotesCreate />} />
-          <Route path="/notes" element={<NotesList />} />
-          <Route path="/notes/:id" element={<NotesShow />} />
-          <Route path="/flash" element={<FlashCard />} />
-          <Route path="/wedding" element={<Wedding />} />
+          <Route path="blog/:id" element={<BlogArticle />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
