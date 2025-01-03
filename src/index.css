@@ -70,14 +70,15 @@ body {
 
 .card {
   height: 100%;
-  background-color: var(--card-bkg-clr);
+  background-color: var(--bkg-clr);
   color: var(--txt-clr);
   /* box-shadow: 2px 4px 6px rgb(54, 54, 54); */
 }
 
 .card:hover {
   transition: 150ms;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .card h5 {
@@ -125,7 +126,7 @@ body {
   font-weight: 600;
 }
 .card-header {
-  background-color: var(--trim-clr);
+  background-color: var(--bkg-clr);
   color: white;
   border-bottom: 1px solid var(--txt-clr)
 }
