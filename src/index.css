@@ -1,6 +1,7 @@
 :root {
   --bkg-clr: rgb(32, 32, 32);
   --card-bkg-clr: rgb(21, 21, 21);
+  --card-bkg-clr-trans: rgba(21, 21, 21, .7);
   --txt-clr: rgb(208, 208, 208);
   --trim-clr: rgb(21, 21, 21);
   --btn-clr: rgb(100, 100, 100);
@@ -73,12 +74,13 @@ body {
   background-color: var(--bkg-clr);
   color: var(--txt-clr);
   /* box-shadow: 2px 4px 6px rgb(54, 54, 54); */
+  border: 1px solid rgba(120, 120, 120, 0);
 }
 
 .card:hover {
   transition: 150ms;
-  /* box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--card-bkg-clr-trans);
+  border: 1px solid rgba(208, 208, 208, 1);
 }
 
 .card h5 {
