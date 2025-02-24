@@ -1,5 +1,5 @@
 :root {
-  --bkg-clr: rgb(32, 32, 32);
+  --bkg-clr: rgb(15, 15, 15);
   --card-bkg-clr: rgb(21, 21, 21);
   --card-bkg-clr-trans: rgba(21, 21, 21, .7);
   --txt-clr: rgb(208, 208, 208);
@@ -25,7 +25,7 @@ body {
   background-color: var(--trim-clr);
 }
 .navbar-brand {
-  font-size: 36px;
+  font-size: 16px;
   color: white;
 }
 @media only screen and (max-width: 600px) {
@@ -77,12 +77,6 @@ body {
   border: 1px solid rgba(120, 120, 120, 0);
 }
 
-.card:hover {
-  transition: 150ms;
-  background-color: var(--card-bkg-clr-trans);
-  border: 1px solid rgba(208, 208, 208, 1);
-}
-
 .card h5 {
   font-size: 24px;
 }
@@ -92,8 +86,10 @@ body {
 }
 
 .item-container {
-  padding: 1rem;
-  border-bottom: 1px solid var(--txt-clr);
+  width: 100%;
+  margin: 2em;
+  padding: 4rem;
+  border-bottom: 1px solid rgba(225, 225, 225, .3);
 }
 
 .flex-col {
@@ -121,7 +117,18 @@ body {
 
 .prof-img {
   width: 100%;
-  border-radius: .25rem;
+  border-radius: 50%;
+}
+
+.name_title {
+  /* margin: 1em 0 0 0; */
+  color: #9D00FF;
+}
+
+
+.role_title {
+  margin: 1em 0 2em 0;
+  color: #9D00FF;
 }
 
 .email-link {
@@ -177,7 +184,7 @@ footer {
   color: var(--trim-clr);
 }
 
-.flash__card {
+/* .flash__card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -241,4 +248,4 @@ footer {
   border: none;
   border-radius: 6px;
   resize: none;
-}
+} */

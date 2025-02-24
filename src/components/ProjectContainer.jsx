@@ -1,6 +1,8 @@
 export default function ProjectContainer(props) {
+    console.log(props.language);
+    
     return (
-        <div className="item-container col-md-6">
+        <div className="item-container">
             <h5 className="card-title">{props.language ? props.project.titleEsp : props.project.titleEng}</h5>
             <p className="card-text">{props.language ? props.project.contentEsp : props.project.contentEng}</p>
             <div className="card-btn-cont">
