@@ -23,7 +23,8 @@ export default function Intro(props) {
                             return (<p key={language.engIntro.indexOf(i)}>{i}</p>)
                         })}
                         <p>📧 Email: <a href="mailto:matthewclifford@hotmail.co.uk" className="email">matthewclifford@hotmail.co.uk</a></p>
-                        <p>{props.language ? "¡Echa un vistazo a mi trabajo!" : "Check out my work!"}: <a href="/projects?lang=es">{props.language ? "Aquí":"Here"}</a></p>
+                        <p>{props.language ? "¡Echa un vistazo a mi trabajo!" : "Check out my work!"}: <a className="btn-sm" href="/projects?lang=es">{props.language ? "Aquí":"Here"}</a></p>
+                        <p>{props.language ? "¡Lee una resumen de mis habilidades y experiencia laboral, generizado por IA!" : "Read an AI generated summary of my skills and experience!"}: <a className="btn-sm" href="/summary?lang=es">{props.language ? "Aquí":"Here"}</a></p>
                     </div>
 
                 </div>
