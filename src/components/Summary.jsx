@@ -69,14 +69,11 @@ export default function SummaryComponent(props) {
         return (await response).choices[0].message.content
     }
     
-    const handleClick = async () => {
+
+    useEffect(async() => {
         const result = await getChatCompletions()
         setSummary(result)
         setLoading(true)
-    }
-
-    useEffect(() => {
-        handleClick()
     }, [])
 
     return <div className="summary-box">
