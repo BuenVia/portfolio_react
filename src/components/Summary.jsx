@@ -70,10 +70,13 @@ export default function SummaryComponent(props) {
     }
     
 
-    useEffect(async() => {
-        const result = await getChatCompletions()
-        setSummary(result)
-        setLoading(true)
+    useEffect(() => {
+        const call = async () => {
+            const result = await getChatCompletions()
+            setSummary(result)
+            setLoading(true)
+        }
+        call()
     }, [])
 
     return <div className="summary-box">

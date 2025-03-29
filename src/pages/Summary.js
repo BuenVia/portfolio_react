@@ -20,7 +20,7 @@ export default function Summary() {
                 <div>
                     <p>Click on the button below to obtain an AI generated review of my skills and work experience.</p>
                     <p>This is generated using OpenAI's <b>'gpt-4o-mini'</b> model which is called via API.</p>
-                    <a><button className="btn-summary" onClick={handleClick}>Click me...</button></a>
+                    <button className="btn-summary" onClick={handleClick}>Click me...</button>
                 </div>
                 }
             </div>
