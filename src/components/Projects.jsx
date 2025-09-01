@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 export default function Projects(props) {
 
-  const [lang, setLang] = useState(true)
+  const [lang, setLang] = useState(false)
 
   function handleClick() {
       setLang(prevVals => !prevVals)
