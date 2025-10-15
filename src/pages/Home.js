@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
     <div>
-      <Header lang={"Spanish"} link={"/es"}/>
+      <Header lang={"En"} home={"/"} link={"/es"} flag={"./uk.png"}  cv={"./matt_clifford_CV.pdf"}/>
       {/* ===== HERO SECTION ===== */}
       <section className="py-5 bg-gradient" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
         <div className="container py-5">

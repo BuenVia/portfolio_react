@@ -3,7 +3,7 @@ export default function Header(props) {
       <header className="sticky-top">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow">
           <div className="container">
-            <a className="navbar-brand fw-bold text-uppercase fs-4" href="/">
+            <a className="navbar-brand fw-bold text-uppercase fs-4" href={props.home}>
               <span className="text-primary">MJ</span>Clifford
             </a>
             <button
@@ -20,9 +20,6 @@ export default function Header(props) {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav gap-lg-3">
                 <li className="nav-item">
-                  <a className="nav-link active fw-semibold" href="/">Home</a>
-                </li>
-                <li className="nav-item">
                   <a className="nav-link fw-semibold" href="#projects">Projects</a>
                 </li>
                 <li className="nav-item">
@@ -36,12 +33,12 @@ export default function Header(props) {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link btn btn-outline-primary btn-sm px-3 fw-semibold" href="/matt_clifford_CV.pdf" target="_blank" rel="noopener noreferrer">
+                  <a className="nav-link btn btn-outline-primary btn-sm px-3 fw-semibold" href={props.cv} target="_blank" rel="noopener noreferrer">
                     CV
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link fw-semibold" href={props.link}>{props.lang}</a>
+                  <a className="nav-link fw-semibold" href={props.link}>{props.lang} <img src={props.flag} alt="UK" width="20" className="me-2" /></a>
                 </li>
               </ul>
             </div>
