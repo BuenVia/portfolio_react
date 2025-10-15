@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header(props) {
     return (
       <header className="sticky-top">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow">
@@ -39,6 +39,9 @@ export default function Header() {
                   <a className="nav-link btn btn-outline-primary btn-sm px-3 fw-semibold" href="/matt_clifford_CV.pdf" target="_blank" rel="noopener noreferrer">
                     CV
                   </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link fw-semibold" href={props.link}>{props.lang}</a>
                 </li>
               </ul>
             </div>

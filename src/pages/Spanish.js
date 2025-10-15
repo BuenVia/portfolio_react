@@ -1,13 +1,13 @@
 import projects from "../projects"
 import Header from "../components/Header";
 
-export default function Home() {
+export default function Spanish() {
 
     const techStack = ["React", "Django", "Node.js", "PostgreSQL", "MongoDB", "SQL", "REST APIs", "AI Engineering", "Linux", "Jira", "Git", "Docker", "HTML5", "CSS3"]
 
     return (
     <div>
-      <Header lang={"Spanish"} link={"/es"}/>
+      <Header lang={"English"} link={"/"} />
       {/* ===== HERO SECTION ===== */}
       <section className="py-5 bg-gradient" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
         <div className="container py-5">
@@ -24,18 +24,18 @@ export default function Home() {
               </div>
               {/* <h1 className="display-3 fw-bold mb-3" style={{color: "#333"}}>Matthew Clifford</h1> */}
               <p className="fs-4 mb-4 opacity-90"  style={{color: "#777"}}>
-                Hi, I'm Matt 👋 — a passionate Software Developer specializing in Python development
+                Hola, soy Matt 👋 — un Desarrollador de Software apasionado especializado en desarrollo Python
               </p>
               <p className="fs-5 mb-4 opacity-90" style={{color: "#777"}}>
-                Crafting clean, efficient, and scalable solutions with 2 years of hands-on experience.
-                From robust APIs to dynamic web applications, I turn ideas into reality.
+                Creando soluciones limpias, eficientes y escalables con 2 años de experiencia práctica.
+                Desde APIs robustas hasta aplicaciones web dinámicas, convierto ideas en realidad.
               </p>
               <div className="d-flex gap-3 flex-wrap">
                 <a href="#projects" className="btn btn-light btn-lg px-4 fw-semibold shadow">
-                  View My Work
+                  Ver Mi Trabajo
                 </a>
                 <a href="mailto:matt@mjclifford.com" className="btn btn-light btn-lg px-4 fw-semibold shadow">
-                  Get In Touch
+                  Contactar
                 </a>
               </div>
             </div>
@@ -47,8 +47,8 @@ export default function Home() {
       <section className="py-5 bg-white">
         <div className="container py-4">
           <div className="text-center mb-5">
-            <h2 className="fw-bold display-6 mb-3">Tech Stack</h2>
-            <p className="text-muted fs-5">Technologies I work with daily</p>
+            <h2 className="fw-bold display-6 mb-3">Stack Tecnológico</h2>
+            <p className="text-muted fs-5">Tecnologías con las que trabajo diariamente</p>
           </div>
           <div className="row g-4">
             {/* Python - Featured */}
@@ -59,7 +59,7 @@ export default function Home() {
                     <span className="fs-1 fw-bold text-primary">🐍</span>
                   </div>
                   <h5 className="card-title fw-bold mb-2">Python</h5>
-                  <p className="card-text text-muted mb-0">Primary language for backend development, automation, and data processing</p>
+                  <p className="card-text text-muted mb-0">Lenguaje principal para desarrollo backend, automatización y procesamiento de datos</p>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Home() {
                     <span className="fs-1 fw-bold text-warning">JS</span>
                   </div>
                   <h5 className="card-title fw-bold mb-2">JavaScript</h5>
-                  <p className="card-text text-muted mb-0">Building interactive UIs and full-stack applications with modern frameworks</p>
+                  <p className="card-text text-muted mb-0">Construcción de interfaces interactivas y aplicaciones full-stack con frameworks modernos</p>
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function Home() {
                     <span className="fs-1 fw-bold text-info">PHP</span>
                   </div>
                   <h5 className="card-title fw-bold mb-2">PHP</h5>
-                  <p className="card-text text-muted mb-0">Server-side scripting and web application development</p>
+                  <p className="card-text text-muted mb-0">Scripting del lado del servidor y desarrollo de aplicaciones web</p>
                 </div>
               </div>
             </div>
@@ -108,18 +108,18 @@ export default function Home() {
       <section id="projects" className="py-5 bg-light">
         <div className="container py-4">
           <div className="text-center mb-5">
-            <h2 className="fw-bold display-6 mb-3">Projects</h2>
-            <p className="text-muted fs-5">Click on <span className="fw-bold">Site</span> to view project or <span className="fw-bold">GitHub</span> to view the git repo.</p>
+            <h2 className="fw-bold display-6 mb-3">Proyectos</h2>
+            <p className="text-muted fs-5">Haz clic en <span className="fw-bold">Sitio</span> para ver el proyecto o <span className="fw-bold">GitHub</span> para ver el repositorio.</p>
           </div>
           <div className="row g-4">
             {projects.map(project => {
                 return (
                 <div className="col-lg-4" key={project.id}>
                 <div className="p-4 h-100">
-                    <h5 className="fw-bold mb-3">{project.titleEng}</h5>
-                    <p className="text-muted">{project.contentEng}</p>
+                    <h5 className="fw-bold mb-3">{project.titleEsp}</h5>
+                    <p className="text-muted">{project.contentEsp}</p>
                     <a target="_blank" rel="noreferrer" href={project.site} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
-                        Site
+                        Sitio
                     </a>
                     <a target="_blank" rel="noreferrer" href={project.gitHub} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
                         GitHub
@@ -135,13 +135,13 @@ export default function Home() {
       {/* ===== CTA ===== */}
       <section className="py-5 bg-dark text-white">
         <div className="container py-5 text-center">
-          <h2 className="display-5 fw-bold mb-4">Let's Build Something Amazing</h2>
+          <h2 className="display-5 fw-bold mb-4">Construyamos Algo Increíble</h2>
           <p className="fs-5 mb-4 text-white-50">
-            Whether you have a project in mind or just want to connect, I'd love to hear from you.
+            Ya sea que tengas un proyecto en mente o simplemente quieras conectar, me encantaría saber de ti.
           </p>
           <div className="d-flex gap-3 justify-content-center flex-wrap">
             <a href="mailto:matt@mjclifford.com" className="btn btn-primary btn-lg px-5 fw-semibold">
-              📧 Email Me
+              📧 Envíame un Email
             </a>
           </div>
         </div>
