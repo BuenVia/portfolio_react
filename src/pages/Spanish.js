@@ -14,7 +14,8 @@ export default function Spanish() {
           <div className="row align-items-center g-5">
             <div className="col-lg-4 text-center">
               <div className="position-relative d-inline-block">
-                <h1 className="display-3 fw-bold mb-3" style={{color: "#333", textAlign: "left"}}>Matthew Clifford</h1>
+                <h1 className="name__header display-3 fw-bold mb-3">Matthew Clifford</h1>
+                <div className="name__title"></div>
               </div>
             </div>
 
@@ -96,7 +97,7 @@ export default function Spanish() {
             <div className="col-12 text-center">
               <div className="d-flex flex-wrap justify-content-center gap-3">
                 {techStack.map(item => {
-                  return <span className="badge bg-dark fs-6 px-4 py-2 rounded-pill">{item}</span>
+                  return <span className="tech__pill badge fs-6 px-4 py-2 rounded-pill">{item}</span>
                 })}
               </div>
             </div>
@@ -114,18 +115,20 @@ export default function Spanish() {
           <div className="row g-4">
             {projects.map(project => {
                 return (
-                <div className="col-lg-4" key={project.id}>
-                <div className="p-4 h-100">
-                    <h5 className="fw-bold mb-3">{project.titleEsp}</h5>
-                    <p className="text-muted">{project.contentEsp}</p>
-                    <a target="_blank" rel="noreferrer" href={project.site} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
-                        Sitio
-                    </a>
-                    <a target="_blank" rel="noreferrer" href={project.gitHub} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
-                        GitHub
-                    </a>
-                </div>
-                </div>
+                <div className="col-lg-3" key={project.id}>
+                  <div className="p-4 h-100 d-flex flex-column">
+                      <h5 className="fw-bold mb-3">{project.titleEsp}</h5>
+                      <p className="text-muted flex-grow-1">{project.contentEsp}</p>
+                      <div>
+                          <a target="_blank" rel="noreferrer" href={project.site} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
+                              Site
+                          </a>
+                          <a target="_blank" rel="noreferrer" href={project.gitHub} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
+                              GitHub
+                          </a>
+                      </div>
+                  </div>
+              </div>
                 )
             })}
           </div>
@@ -133,7 +136,7 @@ export default function Spanish() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="py-5 bg-dark text-white">
+      <section className="cta py-5 bg-dark text-white">
         <div className="container py-5 text-center">
           <h2 className="display-5 fw-bold mb-4">Construyamos Algo Increíble</h2>
           <p className="fs-5 mb-4 text-white-50">
@@ -147,21 +150,6 @@ export default function Spanish() {
         </div>
       </section>
 
-      <style>{`
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-lift:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.15) !important;
-        }
-        .hover-primary:hover {
-          color: #0d6efd !important;
-        }
-        .nav-link {
-          transition: color 0.2s ease;
-        }
-      `}</style>
     </div>
       )
 }

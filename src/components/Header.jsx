@@ -4,7 +4,7 @@ export default function Header(props) {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow">
           <div className="container">
             <a className="navbar-brand fw-bold text-uppercase fs-4" href={props.home}>
-              <span className="text-primary">MJ</span>Clifford
+              <span>MJ</span>Clifford
             </a>
             <button
               className="navbar-toggler border-0"
