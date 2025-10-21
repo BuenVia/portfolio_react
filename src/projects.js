@@ -1,8 +1,8 @@
 const projects = [
   {
-    id:3,
-    titleEng: 'Spotify Profiler 📈',
-    titleEsp: 'Analizador de Spotify 📈',
+    id:4,
+    titleEng: 'Spotify Profiler 🎵',
+    titleEsp: 'Analizador de Spotify 🎵',
     contentEng: 'Using the Spotify API, profiles artists and the releases. Backend built in Python (FastAPI) and run as Docker deploy on Render.com. Frontend in JavaScript (React).',
     contentEsp: 'Usando la API de Spotify, perfila artistas y sus lanzamientos. Backend construido en Python (FastAPI) y ejecutado como despliegue Docker en Render.com. Frontend en JavaScript (React).',
     site: 'https://spotify-profiler-0fyj.onrender.com',

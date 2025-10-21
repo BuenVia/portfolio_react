@@ -1,4 +1,5 @@
 import projects from "../projects"
+import cpds from "../cpd";
 import Header from "../components/Header";
 
 export default function Spanish() {
@@ -7,7 +8,7 @@ export default function Spanish() {
 
     return (
     <div>
-      <Header lang={"ES"} home={"/es"} link={"/"} flag={"./spain.png"} cv={"./matt_clifford_CV_es.pdf"}/>
+      <Header lang={"ES"} home={"/es"} link={"/"} cpd={"Formación Continua"} flag={"./assets/images/spain.png"} cv={"./assets/cv/matt_clifford_CV_es.pdf"}/>
       {/* ===== HERO SECTION ===== */}
       <section className="py-5 bg-gradient" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
         <div className="container py-5">
@@ -45,7 +46,7 @@ export default function Spanish() {
       </section>
 
       {/* ===== TECH STACK ===== */}
-      <section className="py-5 bg-white">
+      <section className="py-2 bg-white">
         <div className="container py-4">
           <div className="text-center mb-5">
             <h2 className="fw-bold display-6 mb-3">Stack Tecnológico</h2>
@@ -125,6 +126,37 @@ export default function Spanish() {
                           </a>
                           <a target="_blank" rel="noreferrer" href={project.gitHub} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
                               GitHub
+                          </a>
+                      </div>
+                  </div>
+              </div>
+                )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ==== CPD ==== */}
+      <section id="cpd" className="py-5 bg-white">
+        <div className="container py-4">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold display-6 mb-3">Continued Professional Development</h2>
+            <p className="text-muted fs-5">Click on <span className="fw-bold">Site</span> to view project or <span className="fw-bold">GitHub</span> to view the git repo.</p>
+          </div>
+          <div className="row g-4">
+            {cpds.map((cpd, index) => {
+                return (
+                <div className="col-lg-4" key={index}>
+                  <div className="p-4 h-100 d-flex flex-column">
+                      <h5 className="fw-bold mb-3">{cpd.title}</h5>
+                      <p className="flex-grow-1 text-muted">{cpd.date_completed}</p>
+                      <p className="flex-grow-1">{cpd.summary}</p>
+                      <div>
+                          <a target="_blank" rel="noreferrer" href={cpd.certificate_link} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
+                              Certificate
+                          </a>
+                          <a target="_blank" rel="noreferrer" href={cpd.course_link} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
+                              Course
                           </a>
                       </div>
                   </div>

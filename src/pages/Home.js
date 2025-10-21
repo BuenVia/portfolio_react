@@ -1,4 +1,5 @@
 import projects from "../projects"
+import cpds from "../cpd";
 import Header from "../components/Header";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
 
     return (
     <div>
-      <Header lang={"En"} home={"/"} link={"/es"} flag={"./uk.png"}  cv={"./matt_clifford_CV.pdf"}/>
+      <Header lang={"En"} home={"/"} link={"/es"} cpd={"CPD"} flag={"./assets/images/uk.png"}  cv={"./assets/cv/matt_clifford_CV.pdf"}/>
       {/* ===== HERO SECTION ===== */}
       <section className="py-5 bg-gradient" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
         <div className="container py-5">
@@ -45,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* ===== TECH STACK ===== */}
-      <section className="py-5 bg-white">
+      <section className="py-2 bg-white">
         <div className="container py-4">
           <div className="text-center mb-5">
             <h2 className="fw-bold display-6 mb-3">Tech Stack</h2>
@@ -96,8 +97,8 @@ export default function Home() {
           <div className="row mt-5">
             <div className="col-12 text-center">
               <div className="d-flex flex-wrap justify-content-center gap-3">
-                {techStack.map(item => {
-                  return <span className="tech__pill badge fs-6 px-4 py-2 rounded-pill">{item}</span>
+                {techStack.map((item, index) => {
+                  return <span key={index} className="tech__pill badge fs-6 px-4 py-2 rounded-pill">{item}</span>
                 })}
               </div>
             </div>
@@ -125,6 +126,37 @@ export default function Home() {
                           </a>
                           <a target="_blank" rel="noreferrer" href={project.gitHub} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
                               GitHub
+                          </a>
+                      </div>
+                  </div>
+              </div>
+                )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ==== CPD ==== */}
+      <section id="cpd" className="py-5 bg-white">
+                <div className="container py-4">
+          <div className="text-center mb-5">
+            <h2 className="fw-bold display-6 mb-3">Continued Professional Development</h2>
+            <p className="text-muted fs-5">Click on <span className="fw-bold">Site</span> to view project or <span className="fw-bold">GitHub</span> to view the git repo.</p>
+          </div>
+          <div className="row g-4">
+            {cpds.map((cpd, index) => {
+                return (
+                <div className="col-lg-4" key={index}>
+                  <div className="p-4 h-100 d-flex flex-column">
+                      <h5 className="fw-bold mb-3">{cpd.title}</h5>
+                      <p className="flex-grow-1 text-muted">{cpd.date_completed}</p>
+                      <p className="flex-grow-1">{cpd.summary}</p>
+                      <div>
+                          <a target="_blank" rel="noreferrer" href={cpd.certificate_link} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
+                              Certificate
+                          </a>
+                          <a target="_blank" rel="noreferrer" href={cpd.course_link} className="btn btn-light btn-lg px-4 fw-semibold shadow m-1">
+                              Course
                           </a>
                       </div>
                   </div>

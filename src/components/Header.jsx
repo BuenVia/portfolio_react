@@ -38,6 +38,9 @@ export default function Header(props) {
                   </a>
                 </li>
                 <li className="nav-item">
+                  <a className="nav-link fw-semibold" href="#cpd">{props.cpd}</a>
+                </li>
+                <li className="nav-item">
                   <a className="nav-link fw-semibold" href={props.link}>{props.lang} <img src={props.flag} alt="UK" width="20" className="me-2" /></a>
                 </li>
               </ul>
