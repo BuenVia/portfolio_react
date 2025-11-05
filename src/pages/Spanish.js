@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 export default function Spanish() {
 
-    const techStack = ["React", "Django", "Node.js", "PostgreSQL", "MongoDB", "SQL", "REST APIs", "AI Engineering", "Linux", "Jira", "Git", "Docker", "HTML5", "CSS3"]
+    const techStack = ["React", "Django", "Node.js", "PostgreSQL", "MongoDB", "SQL", "REST APIs", "AI Engineering", "LangChain/ LangGraph", "Linux", "Jira", "Git", "Docker", "HTML5", "CSS3"]
 
     return (
     <div>
@@ -107,8 +107,8 @@ export default function Spanish() {
       </section>
 
       {/* ===== PROJECTS ===== */}
-      <section id="projects" className="py-5 bg-light">
-        <div className="container py-4">
+      <section id="projects" className="py-5 bg-dark">
+        <div className="container py-4 text-white">
           <div className="text-center mb-5">
             <h2 className="fw-bold display-6 mb-3">Proyectos</h2>
             <p className="text-muted fs-5">Haz clic en <span className="fw-bold">Sitio</span> para ver el proyecto o <span className="fw-bold">GitHub</span> para ver el repositorio.</p>

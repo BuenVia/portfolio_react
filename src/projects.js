@@ -1,22 +1,22 @@
 const projects = [
-  {
+    {
     id:4,
+    titleEng: 'Customer Sentiment Analyser 📈',
+    titleEsp: 'Analizador de Sentimiento de Clientes 📈',
+    contentEng: 'Analysis tool for cutomer feedback using LangChain and Claude. Backend in Python (Django) and frontend in JavaScript (React).',
+    contentEsp: 'Análisis de comentarios de clientes usando LangChain y Claude. Backend en Python (Django) y frontend en JavaScript (React).',
+    site: 'https://sentiment-dashboard.netlify.app/',
+    gitHub: 'https://github.com/BuenVia/sentiment-dash-backend',
+    __v: 0,
+  },
+  {
+    id:3,
     titleEng: 'Spotify Profiler 🎵',
     titleEsp: 'Analizador de Spotify 🎵',
     contentEng: 'Using the Spotify API, profiles artists and the releases. Backend built in Python (FastAPI) and run as Docker deploy on Render.com. Frontend in JavaScript (React).',
     contentEsp: 'Usando la API de Spotify, perfila artistas y sus lanzamientos. Backend construido en Python (FastAPI) y ejecutado como despliegue Docker en Render.com. Frontend en JavaScript (React).',
     site: 'https://spotify-profiler-0fyj.onrender.com',
     gitHub: 'https://github.com/BuenVia/spotify-profiler',
-    __v: 0,
-  },
-  {
-    id:3,
-    titleEng: 'Customer Sentiment Analyser 📈',
-    titleEsp: 'Analizador de Sentimiento de Clientes 📈',
-    contentEng: 'Analysis tool for cutomer feedback. Backend in Python (Django) and frontend in JavaScript (React).',
-    contentEsp: 'Análisis de comentarios de clientes. Backend en Python (Django) y frontend en JavaScript (React).',
-    site: 'https://sentiment-dashboard.netlify.app/',
-    gitHub: 'https://github.com/BuenVia/sentiment-dash-backend',
     __v: 0,
   },
   {
